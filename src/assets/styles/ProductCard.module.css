@@ -1,0 +1,263 @@
+/* =========== Product Card Container =========== */
+.productCard {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+}
+
+.productCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* =========== Product Image Section =========== */
+.productImageContainer {
+  position: relative;
+  width: 100%;
+  padding-top: 100%;
+  /* Tạo tỷ lệ 1:1 */
+  overflow: hidden;
+}
+
+.productImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.productCard:hover .productImage {
+  transform: scale(1.05);
+}
+
+/* =========== Badges (New, Sale, etc) =========== */
+.productBadge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #e74c3c;
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  z-index: 1;
+}
+
+/* =========== Product Info Section =========== */
+.productInfo {
+  padding: 1.2rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.productName {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin: 0 0 0.5rem;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  min-height: 2.8rem;
+}
+
+.productName:hover {
+  color: #e67e22;
+}
+
+.productDescription {
+  color: #7f8c8d;
+  font-size: 0.85rem;
+  margin-bottom: 0.8rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* =========== Rating Section =========== */
+.productRating {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.8rem;
+}
+
+.ratingStars {
+  color: #f1c40f;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+}
+
+.ratingCount {
+  color: #95a5a6;
+  font-size: 0.8rem;
+  margin-left: 0.5rem;
+}
+
+/* =========== Price Section =========== */
+.productPriceContainer {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.currentPrice {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #e67e22;
+}
+
+.originalPrice {
+  font-size: 0.9rem;
+  color: #95a5a6;
+  text-decoration: line-through;
+  margin-left: 0.5rem;
+}
+
+.discountPercentage {
+  background: #e67e22;
+  color: white;
+  padding: 0.1rem 0.4rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  margin-left: 0.5rem;
+  font-weight: 600;
+}
+
+/* =========== Add to Cart Button =========== */
+.addToCartButton {
+  background: #e67e22;
+  color: white;
+  border: none;
+  padding: 0.7rem;
+  width: 100%;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  margin-top: 1rem;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.addToCartButton:hover {
+  background: #d35400;
+}
+
+.addToCartButton svg {
+  font-size: 1.1rem;
+}
+
+/* =========== Wishlist Button =========== */
+.wishlistButton {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: rgba(255, 255, 255, 0.8);
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+
+.wishlistButton:hover {
+  background: rgba(255, 255, 255, 0.95);
+}
+
+.wishlistButton svg {
+  color: #e74c3c;
+  font-size: 1.1rem;
+}
+
+.wishlistButton.active svg {
+  fill: #e74c3c;
+}
+
+.addToCartButton.adding {
+  background: #95a5a6;
+  cursor: not-allowed;
+}
+
+.addToCartButton.adding:hover {
+  background: #95a5a6;
+}
+
+.imageLink {
+  display: block;
+  text-decoration: none;
+}
+
+/* Animation khi thêm vào giỏ */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.05);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.productCard:active .addToCartButton:not(.adding) {
+  animation: pulse 0.3s ease;
+}
+
+/* =========== Responsive Adjustments =========== */
+@media (max-width: 480px) {
+  .productInfo {
+    padding: 1rem;
+  }
+
+  .productName {
+    font-size: 0.95rem;
+    min-height: 2.6rem;
+  }
+
+  .currentPrice {
+    font-size: 1.1rem;
+  }
+
+  .addToCartButton {
+    padding: 0.6rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .productName {
+    font-size: 1.1rem;
+  }
+
+  .productDescription {
+    font-size: 0.9rem;
+  }
+
+  .currentPrice {
+    font-size: 1.3rem;
+  }
+}

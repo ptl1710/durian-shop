@@ -1,0 +1,301 @@
+/* Layout chính */
+.productDetailContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+  }
+  
+  .backButton {
+    background: none;
+    border: none;
+    color: #3498db;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-bottom: 1.5rem;
+  }
+  
+  .backButton:hover {
+    text-decoration: underline;
+  }
+  
+  .productMain {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+  
+  /* Gallery ảnh */
+  .productGallery {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 1rem;
+  }
+  
+  .thumbnailContainer {
+    display: flex;
+    gap: 0.8rem;
+    overflow-x: auto;
+    padding-bottom: 0.5rem;
+  }
+  
+  .thumbnail {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .thumbnail:hover, .thumbnail.active {
+    border-color: #e67e22;
+  }
+  
+  .mainImageContainer {
+    width: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #f8f9fa;
+  }
+  
+  .mainImage {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  
+  /* Thông tin sản phẩm */
+  .productInfo {
+    flex: 1;
+  }
+  
+  .productTitle {
+    font-size: 1.8rem;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+  }
+  
+  .productRating {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .stars {
+    display: flex;
+    gap: 0.2rem;
+  }
+  
+  .ratingText {
+    color: #7f8c8d;
+    font-size: 0.9rem;
+  }
+  
+  .productPrice {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #e67e22;
+    margin-bottom: 1.5rem;
+  }
+  
+  .productDescription, .productDetails {
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+  }
+  
+  .productDescription h3, .productDetails h3 {
+    font-size: 1.2rem;
+    color: #2c3e50;
+    margin-bottom: 0.8rem;
+  }
+  
+  .productDetails pre {
+    white-space: pre-wrap;
+    font-family: inherit;
+    margin: 0;
+  }
+  
+  /* Thêm vào giỏ hàng */
+  .addToCartSection {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 2rem;
+    align-items: center;
+  }
+  
+  .quantityControl {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  
+  .quantityButton {
+    background: #f8f9fa;
+    border: none;
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .quantityButton:hover {
+    background: #ecf0f1;
+  }
+  
+  .quantity {
+    width: 50px;
+    text-align: center;
+    font-weight: 600;
+  }
+  
+  .addToCartButton {
+    background: #e67e22;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: background 0.3s;
+  }
+  
+  .addToCartButton:hover {
+    background: #d35400;
+  }
+  
+  .wishlistButton {
+    background: white;
+    color: #7f8c8d;
+    border: 1px solid #ddd;
+    padding: 0.8rem 1.5rem;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s;
+  }
+  
+  .wishlistButton:hover {
+    border-color: #e67e22;
+    color: #e67e22;
+  }
+  
+  .wishlistButton.active {
+    background: #fadbd8;
+    border-color: #e74c3c;
+    color: #e74c3c;
+  }
+  
+  /* Đánh giá */
+  .reviewsSection {
+    margin: 3rem 0;
+    padding-top: 2rem;
+    border-top: 1px solid #eee;
+  }
+  
+  .reviewsSection h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: #2c3e50;
+  }
+  
+  .reviewsList {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .reviewItem {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+  }
+  
+  .reviewHeader {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  .reviewUser {
+    font-weight: 600;
+  }
+  
+  .reviewRating {
+    display: flex;
+    gap: 0.2rem;
+  }
+  
+  .reviewDate {
+    color: #7f8c8d;
+    font-size: 0.9rem;
+  }
+  
+  .reviewComment {
+    margin: 0;
+    line-height: 1.6;
+  }
+  
+  .noReviews {
+    color: #7f8c8d;
+    font-style: italic;
+  }
+  
+  /* Responsive */
+  @media (min-width: 768px) {
+    .productMain {
+      flex-direction: row;
+    }
+    
+    .productGallery {
+      flex: 1;
+      flex-direction: row;
+    }
+    
+    .thumbnailContainer {
+      flex-direction: column;
+      width: 80px;
+    }
+    
+    .mainImageContainer {
+      flex: 1;
+    }
+    
+    .productInfo {
+      flex: 1;
+      padding-left: 2rem;
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .productDetailContainer {
+      padding: 2rem;
+    }
+    
+    .productTitle {
+      font-size: 2rem;
+    }
+    
+    .productPrice {
+      font-size: 2rem;
+    }
+  }
