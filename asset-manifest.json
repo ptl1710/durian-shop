@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/durian-shop/static/css/main.dc470418.css",
+    "main.js": "/durian-shop/static/js/main.879d499c.js",
+    "static/js/453.76861a6a.chunk.js": "/durian-shop/static/js/453.76861a6a.chunk.js",
+    "index.html": "/durian-shop/index.html",
+    "main.dc470418.css.map": "/durian-shop/static/css/main.dc470418.css.map",
+    "main.879d499c.js.map": "/durian-shop/static/js/main.879d499c.js.map",
+    "453.76861a6a.chunk.js.map": "/durian-shop/static/js/453.76861a6a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.dc470418.css",
+    "static/js/main.879d499c.js"
+  ]
+}
